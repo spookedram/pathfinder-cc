@@ -1,98 +1,95 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
+  margin: 0;
+  padding: 0;
+  background-color: white;
 }
 
 h1, h2 {
-    margin-top: 16px;
-    line-height: 1em;
+  margin-top: 16px;
+  line-height: 1em;
 }
-
-.intro-p {
-    margin-bottom: 0;
+/* Larger than tablet */
+@media (min-width: 750px) {
+  h1 {
+    margin-top: 32px;
+  }
 }
 
 h3 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
-input[name=char_lvl], input[name=char_lvl]:focus {
-    margin: 0;
-    height: 1em;
-    width: 80px;
-    border: none;
-    outline: none;
-    color: transparent;
-    text-shadow: 0 0 0 black;
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=range] {
+  background-color: gray;
 }
 
 table {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .name-cell {
-    max-width: 110px;
+  max-width: 110px;
 }
 
 .desc-cell {
-    display: none;
+  display: none;
 }
 /* Larger than phablet */
 @media (min-width: 550px) {
-   .desc-cell {
-        display: table-cell;
-    }
+ .desc-cell {
+    display: table-cell;
+  }
 }
 
 .score-cell, .mod-cell {
-    text-align: center;
-    width: 20%;
+  text-align: center;
+  width: 20%;
 }
 
 .mod-cell {
-    padding: 0;
+  padding: 0;
 }
 
 td.name-cell, td.score-cell {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 input[type=number] {
-    margin-top: 10px;
-    outline: none;
+  margin-top: 10px;
+  outline: none;
 }
 
 .race-mods > p, .class-mods > p {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .tab-desc {
-    text-align: justify;
-}
-
-.desc-table {
-    display: none;
+  text-align: justify;
 }
 
 input[name=class] {
-    float: left;
+  float: left;
 }
 
 .skill-row {
-    width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .four.columns.small {
-    width: 30.6666666667%;
+  width: 30.6666666667%;
 }
 
 .six.columns.small {
-    width: 48%;
+  width: 48%;
 }
-
 
 /* Mobile first queries */
 

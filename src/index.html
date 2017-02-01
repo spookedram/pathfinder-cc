@@ -1,439 +1,439 @@
 <!DOCTYPE html>
 
 <html lang="en">
-		
 <head>
-		<!-- Basic Page Needs
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta charset="utf-8">
-		<title>Character Generator</title>
-		<meta name="description" content="Pathfinder Character Generator">
-		<meta name="author" content="Zach Allen">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Fonts
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
-		
-		<!-- CSS
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="stylesheet" href="lib/skeleton/normalize.css" type="text/css" />
-		<link rel="stylesheet" href="lib/skeleton/skeleton.css" type="text/css" />
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-		
-		<!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-		<![endif]-->
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Character Generator</title>
+	<meta name="description" content="Pathfinder Character Generator">
+	<meta name="author" content="Zach Allen">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Fonts
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="lib/skeleton/normalize.css" type="text/css" />
+	<link rel="stylesheet" href="lib/skeleton/skeleton.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
 </head>
 
 <body>
-		<div class="container">
-				<!-- Main Content
+	<div class="container">
+		<h1>Pathfinder Character Creator</h1>
+
+		<section>
+			<h2>Character Level</h2>
+			<input type="range" name="level" class="u-full-width" min="1" max="10">
+			<p>You character's level will help dictate how many extra points you can set to your abilities and skills, but keep in mind that your GM will have to create quests with challenges that are appropriate for the level that your character is at, and low risk makes for a super boring game!</p>
+		</section>
+
+		<section>
+			<h2>Ability Scores</h2>
+			<p>Every character in Pathfinder has ability scores which help determine their level in certain character traits and skills. This system uses the <b>Purchase</b> method, which allows for more control and customization by starting the character with 10 points on each ability and letting you take points from an ability to add to another. Pathfinder reccommends that you go <b>no lower than 7</b> and <b>no higher than 18</b> on any one ability to keep a level of balance. You never know when a wizard will need to make a strength check!</p>
+			<p>If you'd like a little more randomness you can try the <b>Standard</b> method. For each ability you'd roll 4d6, drop the lowest roll, and use the sum as the score. Once you have a score you can add it to the table here!</p>
+			<table class="u-full-width">
+				<thead>
+					<tr>
+						<th class="name-cell">Ability</th>
+						<th class="desc-cell">Description</th>
+						<th class="score-cell">Score</th>
+						<th class="mod-cell">Modifier</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="name-cell">Strength</td>
+						<td class="desc-cell">
+							Represents muscle and physical power
+						</td>
+						<td class="score-cell">
+							<input type="number" class="ability" name="strength" value="10" min="0" max="20" data-mod="0">
+						</td>
+						<td class="mod-cell">0</td>
+					</tr>
+					<tr>
+						<td class="name-cell">Dexterity</td>
+						<td class="desc-cell">
+							Represents agility, reflexes, and balance
+						</td>
+						<td class="score-cell">
+							<input type="number" class="ability" name="dexterity" value="10" min="0" max="20" data-mod="0">
+						</td>
+						<td class="mod-cell">0</td>
+					</tr>
+					<tr>
+						<td class="name-cell">Constitution</td>
+						<td class="desc-cell">
+							Represents health, stamina, and endurance
+						</td>
+						<td class="score-cell">
+							<input type="number" class="ability" name="constitution" value="10" min="0" max="20" data-mod="0">
+						</td>
+						<td class="mod-cell">0</td>
+					</tr>
+					<tr>
+						<td class="name-cell">Intelligence</td>
+						<td class="desc-cell">
+							Represents critical thinking, learning, and logic
+						</td>
+						<td class="score-cell">
+							<input type="number" class="ability" name="intelligence" value="10" min="0" max="20" data-mod="0">
+						</td>
+						<td class="mod-cell">0</td>
+					</tr>
+					<tr>
+						<td class="name-cell">Wisdom</td>
+						<td class="desc-cell">
+							Represents willpower, common sense, and intuition
+						</td>
+						<td class="score-cell">
+							<input type="number" class="ability" name="wisdom" value="10" min="0" max="20" data-mod="0">
+						</td>
+						<td class="mod-cell">0</td>
+					</tr>
+					<tr>
+						<td class="name-cell">Charisma</td>
+						<td class="desc-cell">
+							Represents personality, likability, and ability to lead
+						</td>
+						<td class="score-cell">
+							<input type="number" class="ability" name="charisma" value="10" min="0" max="20" data-mod="0">
+						</td>
+						<td class="mod-cell">0</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section>
+			<h2>Race</h2>
+			<p>There are many races in Pathfinder for players to choose from, all with unique abilities and benefits. Select a race from the dropdown below to see the details and modifiers of that race and when you've found one you like, click the select button and continue.</p>
+			<div class="row">
+				<!-- Tab Navigation
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<h1>Pathfinder Character Creator</h1>
-				<p class="intro-p">First things first, what level is your character?</p>
-				<h2>Character Level: <input type="number" name="char_lvl" value="1" min="1" max="20"></h2>
-				<p>You character's level will help dictate how many extra points you can set to your abilities and skills, but keep in mind that your GM will have to create quests with challenges that are appropriate for the level that your character is at, and low risk makes for a super boring game!</p>
-				<section class="row">
-				<h2>Ability Scores</h2>
-						<p>Every character in Pathfinder has ability scores which help determine their level in certain character traits and skills. This system uses the <b>Purchase</b> method, which allows for more control and customization by starting the character with 10 points on each ability and letting you take points from an ability to add to another. Pathfinder reccommends that you go <b>no lower than 7</b> and <b>no higher than 18</b> on any one ability to keep a level of balance. You never know when a wizard will need to make a strength check!</p>
-						<p>If you'd like a little more randomness you can try the <b>Standard</b> method. For each ability you'd roll 4d6, drop the lowest roll, and use the sum as the score. Once you have a score you can add it to the table here!</p>
-						<table class="u-full-width">
-							<thead>
-								<tr>
-									<th class="name-cell">Ability</th>
-									<th class="desc-cell">Description</th>
-									<th class="score-cell">Score</th>
-									<th class="mod-cell">Modifier</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="name-cell">Strength</td>
-									<td class="desc-cell">
-										Represents muscle and physical power
-									</td>
-									<td class="score-cell">
-										<input type="number" class="ability" name="strength" value="10" min="0" max="20" data-mod="0">
-									</td>
-									<td class="mod-cell">0</td>
-								</tr>
-								<tr>
-									<td class="name-cell">Dexterity</td>
-									<td class="desc-cell">
-										Represents agility, reflexes, and balance
-									</td>
-									<td class="score-cell">
-										<input type="number" class="ability" name="dexterity" value="10" min="0" max="20" data-mod="0">
-									</td>
-									<td class="mod-cell">0</td>
-								</tr>
-								<tr>
-									<td class="name-cell">Constitution</td>
-									<td class="desc-cell">
-										Represents health, stamina, and endurance
-									</td>
-									<td class="score-cell">
-										<input type="number" class="ability" name="constitution" value="10" min="0" max="20" data-mod="0">
-									</td>
-									<td class="mod-cell">0</td>
-								</tr>
-								<tr>
-									<td class="name-cell">Intelligence</td>
-									<td class="desc-cell">
-										Represents critical thinking, learning, and logic
-									</td>
-									<td class="score-cell">
-										<input type="number" class="ability" name="intelligence" value="10" min="0" max="20" data-mod="0">
-									</td>
-									<td class="mod-cell">0</td>
-								</tr>
-								<tr>
-									<td class="name-cell">Wisdom</td>
-									<td class="desc-cell">
-										Represents willpower, common sense, and intuition
-									</td>
-									<td class="score-cell">
-										<input type="number" class="ability" name="wisdom" value="10" min="0" max="20" data-mod="0">
-									</td>
-									<td class="mod-cell">0</td>
-								</tr>
-								<tr>
-									<td class="name-cell">Charisma</td>
-									<td class="desc-cell">
-										Represents personality, likability, and ability to lead
-									</td>
-									<td class="score-cell">
-										<input type="number" class="ability" name="charisma" value="10" min="0" max="20" data-mod="0">
-									</td>
-									<td class="mod-cell">0</td>
-								</tr>
-							</tbody>
-						</table>
-				</section>
-				
-				
-				<section>
-				<h2>Race</h2>
-				<p>There are many races in Pathfinder for players to choose from, all with unique abilities and benefits. Select a race from the dropdown below to see the details and modifiers of that race and when you've found one you like, click the select button and continue.</p>
-						<div class="row">
-								<!-- Tab Navigation
-								–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-								<div class="three columns tab-nav">
-										<b>Basic</b>
-										<select id="selectRace" class="u-full-width">
-												<option value="0">Human</option>
-												<option value="1">Elf</option>
-												<option value="2">Half-Elf</option>
-												<option value="3">Dwarf</option>
-												<option value="4">Gnome</option>
-												<option value="5">Halfling</option>
-												<option value="6">Orc</option>
-												<option value="7">Half-Orc</option>
-										</select>
-										<b>Modifiers</b>
-										<p id="raceMods">raceMods</p>
-								</div>
-								<!-- Description
-								–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-								<div class="nine columns">
-										<div class="eight columns tab-desc">
-												<h5 id="raceName">raceName</h5>
-												<p id="raceDesc">raceDesc</p>
-										</div>
-										<div class="four columns race-mods">
-												<b>Benefits</b>
-														<p id="raceBens">raceBens</p>
-												<b>Languages</b>
-														<p id="raceLangs">raceLangsCommon</p>
-												<button class="u-full-width">Select</button>
-										</div>
-								</div>
-								
-						</div>
-				</section>
-				
-				<section>
-				<h2>Class</h2>
-				<p>Every player has a specialty, known as their class. A player's class outlines their abilities, proficiencies, weapons, spells, and much more. Classes get special skill bonuses and feats and at the higher levels a player can unlock their character's potential.</p>
-						<div class="row">
-								<!-- Tab Navigation
-								–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-								<div id="classTabs" class="three columns tab-nav">
-										<b>Basic</b>
-										<select id="basicJobs" class="u-full-width">
-												<option value="0">Barbarian</option>
-												<option value="1">Bard</option>
-												<option value="2">Cleric</option>
-												<option value="3">Druid</option>
-												<option value="4">Fighter</option>
-												<option value="5">Monk</option>
-												<option value="6">Paladin</option>
-												<option value="7">Ranger</option>
-												<option value="8">Rogue</option>
-												<option value="9">Sorcerer</option>
-												<option value="10">Wizard</option>
-										</select>
-										
-										<b>Prestige</b>
-										<select id="presJobs" class="u-full-width">
-												<option value="11">Arcane Archer</option>
-												<option value="12">Arcane Trickster</option>
-												<option value="13">Assassin</option>
-												<option value="14">Dragon Disciple</option>
-												<option value="15">Duelist</option>
-												<option value="16">Eldritch Knight</option>
-												<option value="17">Loremaster</option>
-												<option value="18">Mystic Theurge</option>
-												<option value="19">Pathfinder Chronicler</option>
-												<option value="20">Shadowdancer</option>
-										</select>
-										<p>Note: Prestige classes are reserved for characters that meet specific requirements and are taken on at higher levels. <a href="#">Read more on prestige classes here.</a></p>
-								</div>
-								<!-- Description
-								–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-								<div class="nine columns tab">
-										<div class="eight columns tab-desc">
-												<h5 id="className">className</h5>
-												<p id="classDesc">classDesc</p>
-										</div>
-										<div class="four columns class-mods">
-												<b>Preferred Weapons</b>
-												<p id="prefWeapons">prefWeapons</p>
-												
-												<b>Preferred Armor</b>
-												<p id="prefArmor">prefArmor</p>
-												
-												<b>Suited for</b>
-												<p id="suitedFor">suitedFor</p>
-												
-												<b>Alignments</b>
-												<p id="prefAlign">prefAlign</p>
-												<button class="u-full-width">Select</button>
-										</div>
-								</div>
-								
-						</div>
-				</section>
-				
-				<section class="row">
-				<h2>Skills</h2>
-				<div class="row">
-					<h3>Choose your skills</h3>
-					<table id="skillTable" class="u-full-width">
-						<tbody>
-							<tr>
-								<td>Acrobatics</td>
-							</tr>
-							<tr>
-								<td>Appraise</td>
-							</tr>
-							<tr>
-								<td>Bluff</td>
-							</tr>
-							<tr>
-								<td>Climb</td>
-							</tr>
-							<tr>
-								<td>Craft</td>
-							</tr>
-							<tr>
-								<td>Diplomacy</td>
-							</tr>
-							<tr>
-								<td>Disable Device</td>
-							</tr>
-							<tr>
-								<td>Disguise</td>
-							</tr>
-							<tr>
-								<td>Escape Artist</td>
-							</tr>
-							<tr>
-								<td>Fly</td>
-							</tr>
-							<tr>
-								<td>Handle Animal</td>
-							</tr>
-							<tr>
-								<td>Heal</td>
-							</tr>
-							<tr>
-								<td>Intimidate</td>
-							</tr>
-							<tr>
-								<td>( K ) Arcana</td>
-							</tr>
-							<tr>
-								<td>( K ) Dungeoneering</td>
-							</tr>
-							<tr>
-								<td>( K ) Engineering</td>
-							</tr>
-							<tr>
-								<td>( K ) Geography</td>
-							</tr>
-							<tr>
-								<td>( K ) History</td>
-							</tr>
-							<tr>
-								<td>( K ) Local</td>
-							</tr>
-							<tr>
-								<td>( K ) Nature</td>
-							</tr>
-							<tr>
-								<td>( K ) Nobility</td>
-							</tr>
-							<tr>
-								<td>( K ) Planes</td>
-							</tr>
-							<tr>
-								<td>( K ) Religion</td>
-							</tr>
-							<tr>
-								<td>Linguistics</td>
-							</tr>
-							<tr>
-								<td>Perception</td>
-							</tr>
-							<tr>
-								<td>Perform</td>
-							</tr>
-							<tr>
-								<td>Profession</td>
-							</tr>
-							<tr>
-								<td>Ride</td>
-							</tr>
-							<tr>
-								<td>Sense Motive</td>
-							</tr>
-							<tr>
-								<td>Sleight of Hand</td>
-							</tr>
-							<tr>
-								<td>Spellcraft</td>
-							</tr>
-							<tr>
-								<td>Stealth</td>
-							</tr>
-							<tr>
-								<td>Survival</td>
-							</tr>
-							<tr>
-								<td>Swim</td>
-							</tr>
-							<tr>
-								<td>Use Magic Device</td>
-							</tr>
-						</tbody>
-					</table>
+				<div class="three columns tab-nav">
+					<b>Basic</b>
+					<select id="selectRace" class="u-full-width">
+						<option value="0">Human</option>
+						<option value="1">Elf</option>
+						<option value="2">Half-Elf</option>
+						<option value="3">Dwarf</option>
+						<option value="4">Gnome</option>
+						<option value="5">Halfling</option>
+						<option value="6">Orc</option>
+						<option value="7">Half-Orc</option>
+					</select>
+					<b>Modifiers</b>
+					<p id="raceMods">raceMods</p>
 				</div>
-				</section>
-				
-				<section class="row">
-				<h2>Feats</h2>
-					
-				</section>
-				
-				<section class="row">
-				<h2>Equipment</h2>
-				<h3>Weapons and Armor</h3>
-					<p>Your character's choice of weapons and armor can go deeper than what's most efficient or what looks the coolest to weild. Think about who your character is as a person and what their past is like. What sort of influences do they have, who taught them to fight? The proper choices can lead to a well-rounded, interesting foundation off of which you can build a fully-realized character. Or just pick the broadsword.</p>
-					
-				<h3>Other Items</h3>
-					<p>One of the ways to build a picture of the kind of person your character is lies in their belongings. Are they equipped with thieve's tools and disguises? What about a pickaxe, a canteen, and rope? If your character is going to interact with the world, they're going to need stuff to work with.</p>
-					
-				</section>
-				
-				<section class="row">
-				<h2>Details</h2>
-				<div id="details">
-						<div class="four columns">
-								<h5>Starting Stats</h5>
-								<div class="row">
-										<div class="six columns small">
-												<label for="">Starting HP</label>
-												<input type="number" name="hp" value="0" min="0" max="100">
-										</div>
-										<div class="six columns small">
-												<label for="">Armor Class</label>
-												<input type="number" name="ac" value="0" min="0" max="100">
-										</div>
-								</div>
-								<div class="row">
-										<div class="six columns small">
-												<label for="">Initiative</label>
-												<input type="number" name="init" value="0" min="0" max="10">
-										</div>
-										<div class="six columns small">
-												<label for="">Attack Power</label>
-												<input type="number" name="ap" value="0" min="0" max="10">
-										</div>
-								</div>
-						</div>
-						<div class="four columns">
-								<h5>Saving Throws</h5>
-								<div class="row" style="margin-bottom:16px;">
-										<div class="four columns small">
-												<label for="">Fort</label>
-												<span>0</span>
-										</div>
-										<div class="four columns small">
-												<label for="">Ref</label>
-												<span>0</span>
-										</div>
-										<div class="four columns small">
-												<label for="">Will</label>
-												<span>0</span>
-										</div>
-								</div>
-								<div class="row">
-										<div class="six columns small">
-												<label for="height">Height</label>
-												<input type="number" name="height_feet" value="0" min="0" max="10"> ft.
-												<input type="number" name="height_inches" value="0" min="0" max="11"> in.
-										</div>
-										<div class="six columns small">
-												<label for="weight">Weight</label>
-												<input type="number" name="weight" value="0" min="0" max="999"> lbs.
-										</div>
-								</div>
-						</div>
-						<div class="four columns">
-								<label for="char_name">Character Name</label>
-								<input class="u-full-width" type="text" name="char_name"/>
-								<label for="">Personality Traits</label>
-								<input class="u-full-width" type="text" name=""/>
-								<label for="">Alignment</label>
-								<select class="u-full-width">
-										<option value="LG">Lawful Good</option>
-										<option value="NG">Neutral Good</option>
-										<option value="CG">Chaotic Good</option>
-										<option value="LN">Lawful Neutral</option>
-										<option value="TN">True Neutral</option>
-										<option value="CN">Chaotic Neutral</option>
-										<option value="LE">Lawful Evil</option>
-										<option value="NE">Neutral Evil</option>
-										<option value="CE">Chaotic Evil</option>
-								</select>
-						</div>
+				<!-- Description
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div class="nine columns">
+					<div class="eight columns tab-desc">
+						<h5 id="raceName">raceName</h5>
+						<p id="raceDesc">raceDesc</p>
+					</div>
+					<div class="four columns race-mods">
+						<b>Benefits</b>
+							<p id="raceBens">raceBens</p>
+						<b>Languages</b>
+							<p id="raceLangs">raceLangsCommon</p>
+						<button class="u-full-width">Select</button>
+					</div>
 				</div>
-				</section>
-				
-				<section class="row">
-				<h2>Finish</h2>
-				
-				</section>
-				
-		</div>
-		
-		<!-- Scripts
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="./js/races.js"></script>
-		<script type="text/javascript" src="./js/jobs.js"></script>
-		<script type="text/javascript" src="./js/script.js"></script>
+
+			</div>
+		</section>
+
+		<section>
+			<h2>Class</h2>
+			<p>Every player has a specialty, known as their class. A player's class outlines their abilities, proficiencies, weapons, spells, and much more. Classes get special skill bonuses and feats and at the higher levels a player can unlock their character's potential.</p>
+			<div class="row">
+				<!-- Tab Navigation
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div id="classTabs" class="three columns tab-nav">
+					<b>Basic</b>
+					<select id="basicJobs" class="u-full-width">
+						<option value="0">Barbarian</option>
+						<option value="1">Bard</option>
+						<option value="2">Cleric</option>
+						<option value="3">Druid</option>
+						<option value="4">Fighter</option>
+						<option value="5">Monk</option>
+						<option value="6">Paladin</option>
+						<option value="7">Ranger</option>
+						<option value="8">Rogue</option>
+						<option value="9">Sorcerer</option>
+						<option value="10">Wizard</option>
+					</select>
+
+					<b>Prestige</b>
+					<select id="presJobs" class="u-full-width">
+						<option value="11">Arcane Archer</option>
+						<option value="12">Arcane Trickster</option>
+						<option value="13">Assassin</option>
+						<option value="14">Dragon Disciple</option>
+						<option value="15">Duelist</option>
+						<option value="16">Eldritch Knight</option>
+						<option value="17">Loremaster</option>
+						<option value="18">Mystic Theurge</option>
+						<option value="19">Pathfinder Chronicler</option>
+						<option value="20">Shadowdancer</option>
+					</select>
+					<p>Note: Prestige classes are reserved for characters that meet specific requirements and are taken on at higher levels. <a href="#">Read more on prestige classes here.</a></p>
+				</div>
+				<!-- Description
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div class="nine columns tab">
+					<div class="eight columns tab-desc">
+						<h5 id="className">className</h5>
+						<p id="classDesc">classDesc</p>
+					</div>
+					<div class="four columns class-mods">
+						<b>Preferred Weapons</b>
+						<p id="prefWeapons">prefWeapons</p>
+
+						<b>Preferred Armor</b>
+						<p id="prefArmor">prefArmor</p>
+
+						<b>Suited for</b>
+						<p id="suitedFor">suitedFor</p>
+
+						<b>Alignments</b>
+						<p id="prefAlign">prefAlign</p>
+						<button class="u-full-width">Select</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section>
+			<h2>Skills</h2>
+			<div class="row">
+				<h3>Choose your skills</h3>
+				<table id="skillTable" class="u-full-width">
+					<tbody>
+						<tr>
+							<td>Acrobatics</td>
+						</tr>
+						<tr>
+							<td>Appraise</td>
+						</tr>
+						<tr>
+							<td>Bluff</td>
+						</tr>
+						<tr>
+							<td>Climb</td>
+						</tr>
+						<tr>
+							<td>Craft</td>
+						</tr>
+						<tr>
+							<td>Diplomacy</td>
+						</tr>
+						<tr>
+							<td>Disable Device</td>
+						</tr>
+						<tr>
+							<td>Disguise</td>
+						</tr>
+						<tr>
+							<td>Escape Artist</td>
+						</tr>
+						<tr>
+							<td>Fly</td>
+						</tr>
+						<tr>
+							<td>Handle Animal</td>
+						</tr>
+						<tr>
+							<td>Heal</td>
+						</tr>
+						<tr>
+							<td>Intimidate</td>
+						</tr>
+						<tr>
+							<td>( K ) Arcana</td>
+						</tr>
+						<tr>
+							<td>( K ) Dungeoneering</td>
+						</tr>
+						<tr>
+							<td>( K ) Engineering</td>
+						</tr>
+						<tr>
+							<td>( K ) Geography</td>
+						</tr>
+						<tr>
+							<td>( K ) History</td>
+						</tr>
+						<tr>
+							<td>( K ) Local</td>
+						</tr>
+						<tr>
+							<td>( K ) Nature</td>
+						</tr>
+						<tr>
+							<td>( K ) Nobility</td>
+						</tr>
+						<tr>
+							<td>( K ) Planes</td>
+						</tr>
+						<tr>
+							<td>( K ) Religion</td>
+						</tr>
+						<tr>
+							<td>Linguistics</td>
+						</tr>
+						<tr>
+							<td>Perception</td>
+						</tr>
+						<tr>
+							<td>Perform</td>
+						</tr>
+						<tr>
+							<td>Profession</td>
+						</tr>
+						<tr>
+							<td>Ride</td>
+						</tr>
+						<tr>
+							<td>Sense Motive</td>
+						</tr>
+						<tr>
+							<td>Sleight of Hand</td>
+						</tr>
+						<tr>
+							<td>Spellcraft</td>
+						</tr>
+						<tr>
+							<td>Stealth</td>
+						</tr>
+						<tr>
+							<td>Survival</td>
+						</tr>
+						<tr>
+							<td>Swim</td>
+						</tr>
+						<tr>
+							<td>Use Magic Device</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<h2>Feats</h2>
+
+		</section>
+
+		<section>
+			<h2>Equipment</h2>
+			<h3>Weapons and Armor</h3>
+			<p>Your character's choice of weapons and armor can go deeper than what's most efficient or what looks the coolest to weild. Think about who your character is as a person and what their past is like. What sort of influences do they have, who taught them to fight? The proper choices can lead to a well-rounded, interesting foundation off of which you can build a fully-realized character. Or just pick the broadsword.</p>
+
+			<h3>Other Items</h3>
+			<p>One of the ways to build a picture of the kind of person your character is lies in their belongings. Are they equipped with thieve's tools and disguises? What about a pickaxe, a canteen, and rope? If your character is going to interact with the world, they're going to need stuff to work with.</p>
+
+		</section>
+
+		<section>
+			<h2>Details</h2>
+			<div id="details">
+				<div class="four columns">
+					<h5>Starting Stats</h5>
+					<div class="row">
+						<div class="six columns small">
+							<label for="">Starting HP</label>
+							<input type="number" name="hp" value="0" min="0" max="100">
+						</div>
+						<div class="six columns small">
+							<label for="">Armor Class</label>
+							<input type="number" name="ac" value="0" min="0" max="100">
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns small">
+							<label for="">Initiative</label>
+							<input type="number" name="init" value="0" min="0" max="10">
+						</div>
+						<div class="six columns small">
+							<label for="">Attack Power</label>
+							<input type="number" name="ap" value="0" min="0" max="10">
+						</div>
+					</div>
+				</div>
+				<div class="four columns">
+					<h5>Saving Throws</h5>
+					<div class="row" style="margin-bottom:16px;">
+						<div class="four columns small">
+							<label for="">Fort</label>
+							<span>0</span>
+						</div>
+						<div class="four columns small">
+							<label for="">Ref</label>
+							<span>0</span>
+						</div>
+						<div class="four columns small">
+							<label for="">Will</label>
+							<span>0</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns small">
+							<label for="height">Height</label>
+							<input type="number" name="height_feet" value="0" min="0" max="10"> ft.
+							<br />
+							<input type="number" name="height_inches" value="0" min="0" max="11"> in.
+						</div>
+						<div class="six columns small">
+							<label for="weight">Weight</label>
+							<input type="number" name="weight" value="0" min="0" max="999"> lbs.
+						</div>
+					</div>
+				</div>
+				<div class="four columns">
+					<label for="char_name">Character Name</label>
+					<input class="u-full-width" type="text" name="char_name"/>
+					<label for="">Personality Traits</label>
+					<input class="u-full-width" type="text" name=""/>
+					<label for="">Alignment</label>
+					<select class="u-full-width">
+						<option value="LG">Lawful Good</option>
+						<option value="NG">Neutral Good</option>
+						<option value="CG">Chaotic Good</option>
+						<option value="LN">Lawful Neutral</option>
+						<option value="TN">True Neutral</option>
+						<option value="CN">Chaotic Neutral</option>
+						<option value="LE">Lawful Evil</option>
+						<option value="NE">Neutral Evil</option>
+						<option value="CE">Chaotic Evil</option>
+					</select>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Finish</h2>
+
+		</section>
+	</div>
+
+	<!-- Scripts
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/races.js"></script>
+	<script type="text/javascript" src="./js/jobs.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
