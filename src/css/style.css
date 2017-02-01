@@ -1,0 +1,112 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+h1, h2 {
+    margin-top: 16px;
+    line-height: 1em;
+}
+
+.intro-p {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+input[name=char_lvl], input[name=char_lvl]:focus {
+    margin: 0;
+    height: 1em;
+    width: 80px;
+    border: none;
+    outline: none;
+    color: transparent;
+    text-shadow: 0 0 0 black;
+}
+
+table {
+    margin-bottom: 0;
+}
+
+.name-cell {
+    max-width: 110px;
+}
+
+.desc-cell {
+    display: none;
+}
+/* Larger than phablet */
+@media (min-width: 550px) {
+   .desc-cell {
+        display: table-cell;
+    }
+}
+
+.score-cell, .mod-cell {
+    text-align: center;
+    width: 20%;
+}
+
+.mod-cell {
+    padding: 0;
+}
+
+td.name-cell, td.score-cell {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+input[type=number] {
+    margin-top: 10px;
+    outline: none;
+}
+
+.race-mods > p, .class-mods > p {
+    margin-bottom: 1em;
+}
+
+.tab-desc {
+    text-align: justify;
+}
+
+.desc-table {
+    display: none;
+}
+
+input[name=class] {
+    float: left;
+}
+
+.skill-row {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.four.columns.small {
+    width: 30.6666666667%;
+}
+
+.six.columns.small {
+    width: 48%;
+}
+
+
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
