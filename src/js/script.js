@@ -66,7 +66,7 @@ function setRace(idx) {
 //Race controller
 $(function() {
   setRace(0);
-  $("#selectRace").change(function() {
+  $("#selectRace").on("input", function() {
    setRace($(this).val());
   });
 });
@@ -87,10 +87,10 @@ function setJob(idx) {
 //Class (job) controller
 $(function() {
   setJob(0);
-  $("#basicJobs").change(function() {
+  $("#basicJobs").on("input", function() {
     setJob($(this).val());
   });
-  $("#presJobs").change(function() {
+  $("#presJobs").on("input", function() {
     setJob($(this).val());
   });
 });
