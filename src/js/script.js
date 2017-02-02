@@ -10,7 +10,7 @@ var abilities = {
 //Primitive ability controller
 ///*
 $(function() {
-  $("input[type=number].ability").change(function() {
+  $("input[type=number].ability").on('input', function() {
     var value = $(this).val();
     var modVal = value - 10;
     var label = "";

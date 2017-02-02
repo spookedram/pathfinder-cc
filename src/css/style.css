@@ -61,7 +61,7 @@ td.name-cell, td.score-cell {
   padding-bottom: 0;
 }
 
-input[type=number] {
+.ability {
   margin-top: 10px;
   outline: none;
 }
@@ -76,6 +76,17 @@ input[type=number] {
 
 input[name=class] {
   float: left;
+}
+
+.skill {
+  margin: 0;
+}
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .skill {
+    margin-left: 16px;
+    max-width: 48px;
+  }
 }
 
 .skill-row {
