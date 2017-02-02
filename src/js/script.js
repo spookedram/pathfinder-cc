@@ -29,11 +29,6 @@ $(function() {
 });
 //*/
 
-//Advanced ability controller
-$(function() {
-
-});
-
 //======================================================
 
 $(function() {
