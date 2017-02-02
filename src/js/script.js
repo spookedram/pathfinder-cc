@@ -45,17 +45,17 @@ function setRace(idx) {
   var race = races[idx];
 
   $("#raceName").text(race.name);
+  $("#raceMods").text(race.mods);
+  $("#raceSpd").text(race.spd + " feet");
+  $("#raceSize").text(race.size);
   $("#raceDesc").text(race.desc);
-  $("#raceBens").text(race.benefits);
+  $("#raceTraits").text(race.traits);
   $("#raceLangs").text(race.lang);
+
 
   $("input[name=height_feet]").val(race.height_ft);
   $("input[name=height_inches]").val(race.height_in);
   $("input[name=weight]").val(race.weight);
-
-  if(!race.mods) {
-    $("#raceMods").text("No modifiers");
-  }
 }
 
 //Race controller
