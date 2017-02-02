@@ -51,6 +51,8 @@ function setRace(idx) {
   $("#raceDesc").text(race.desc);
   $("#raceTraits").text(race.traits);
   $("#raceLangs").text(race.lang);
+  $("#raceLink").text(race.name);
+  $("#raceLink").attr("href", race.link);
 
 
   $("input[name=height_feet]").val(race.height_ft);
