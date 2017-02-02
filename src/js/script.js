@@ -8,7 +8,7 @@ var abilities = {
   };
 
 //Primitive ability controller
-/*
+///*
 $(function() {
   $("input[type=number].ability").change(function() {
     var value = $(this).val();
@@ -36,6 +36,16 @@ $(function() {
 
 //======================================================
 
+$(function() {
+  var slider = $('input[name=level]'),
+    label = $('#charLevel');
+
+  slider.on('input', function() {
+    label.text(slider.val().toString());
+  });
+});
+
+//======================================================
 function setRace(idx) {
   var race = races[idx];
 
