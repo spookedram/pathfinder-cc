@@ -5,7 +5,7 @@ var jobs = [
         "wpns":"Big ass axe",
         "armor":"None!",
         "suit":"Close-range combat",
-        "alignments":"CG, CN, CE"
+        "alignments":"Any nonlawful"
     },
     {
         "name":"Bard",
