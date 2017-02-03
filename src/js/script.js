@@ -1,16 +1,7 @@
-var abilities = {
-    "str":10,
-    "dex":10,
-    "con":10,
-    "int":10,
-    "wis":10,
-    "cha":10
-  };
-
 //Primitive ability controller
 ///*
 $(function() {
-  $("input[type=number].ability").on('input', function() {
+  $("input[type=number].ability").on("input", function() {
     var value = $(this).val();
     var modVal = value - 10;
     var label = "";
@@ -32,15 +23,16 @@ $(function() {
 //======================================================
 
 $(function() {
-  var slider = $('input[name=level]'),
-    label = $('#charLevel');
+  var slider = $("input[name=level]"),
+    label = $("#charLevel");
 
-  slider.on('input', function() {
+  slider.on("input", function() {
     label.text(slider.val().toString());
   });
 });
 
 //======================================================
+
 function setRace(idx) {
   var race = races[idx];
 
@@ -93,8 +85,3 @@ $(function() {
 });
 
 //======================================================
-
-//Skill controller
-$(function() {
-  $("#skillTable").fixedHeaderTable({ footer: true, cloneHeadToFoot: false, fixedColumn: false });
-});
