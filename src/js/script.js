@@ -1,5 +1,4 @@
-//Primitive ability controller
-///*
+//Primitive Ability Score Controller
 $("input[type=number].ability").on("input", function() {
   var value = $(this).val();
   var modVal = value - 10;
@@ -16,10 +15,9 @@ $("input[type=number].ability").on("input", function() {
 
   $(this).parent().next(".mod-cell").text(label);
 });
-//*/
 
 //======================================================
-
+//Character Level Slider Controller
 var slider = $("input[name=level]");
 var label = $("#charLevel");
 
@@ -28,7 +26,7 @@ slider.on("input", function() {
 });
 
 //======================================================
-
+//Race Selection Controller
 function setRace(idx) {
   var race = races[idx];
 
@@ -48,14 +46,14 @@ function setRace(idx) {
   $("input[name=weight]").val(race.weight);
 }
 
-setRace(0);
+setRace(0); //Initialize race info to human
 
 $("#selectRace").on("input", function() {
  setRace($(this).val());
 });
 
 //======================================================
-
+//Class Selection Controller
 function setJob(idx) {
   var job = jobs[idx];
 
@@ -67,7 +65,7 @@ function setJob(idx) {
   $("#prefAlign").text(job.alignments);
 }
 
-setJob(0);
+setJob(0); //Initialize class info to barbarian
 
 $("#basicJobs").on("input", function() {
   setJob($(this).val());
