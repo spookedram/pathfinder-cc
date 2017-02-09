@@ -1,34 +1,30 @@
 //Primitive ability controller
 ///*
-$(function() {
-  $("input[type=number].ability").on("input", function() {
-    var value = $(this).val();
-    var modVal = value - 10;
-    var label = "";
+$("input[type=number].ability").on("input", function() {
+  var value = $(this).val();
+  var modVal = value - 10;
+  var label = "";
 
-    if(modVal > 0) {
-      label = "+ " + modVal.toString();
-    } else if(modVal < 0) {
-      modVal *= -1;
-      label = "- " + modVal.toString();
-    } else {
-      label = "0";
-    }
+  if(modVal > 0) {
+    label = "+ " + modVal.toString();
+  } else if(modVal < 0) {
+    modVal *= -1;
+    label = "- " + modVal.toString();
+  } else {
+    label = "0";
+  }
 
-    $(this).parent().next(".mod-cell").text(label);
-  });
+  $(this).parent().next(".mod-cell").text(label);
 });
 //*/
 
 //======================================================
 
-$(function() {
-  var slider = $("input[name=level]"),
-    label = $("#charLevel");
+var slider = $("input[name=level]");
+var label = $("#charLevel");
 
-  slider.on("input", function() {
-    label.text(slider.val().toString());
-  });
+slider.on("input", function() {
+  label.text(slider.val().toString());
 });
 
 //======================================================
@@ -52,12 +48,10 @@ function setRace(idx) {
   $("input[name=weight]").val(race.weight);
 }
 
-//Race controller
-$(function() {
-  setRace(0);
-  $("#selectRace").on("input", function() {
-   setRace($(this).val());
-  });
+setRace(0);
+
+$("#selectRace").on("input", function() {
+ setRace($(this).val());
 });
 
 //======================================================
@@ -73,15 +67,14 @@ function setJob(idx) {
   $("#prefAlign").text(job.alignments);
 }
 
-//Class (job) controller
-$(function() {
-  setJob(0);
-  $("#basicJobs").on("input", function() {
-    setJob($(this).val());
-  });
-  $("#presJobs").on("input", function() {
-    setJob($(this).val());
-  });
+setJob(0);
+
+$("#basicJobs").on("input", function() {
+  setJob($(this).val());
+});
+
+$("#presJobs").on("input", function() {
+  setJob($(this).val());
 });
 
 //======================================================
