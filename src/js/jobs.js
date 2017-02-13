@@ -1,5 +1,13 @@
 var jobs = [
     {
+        "name":"Class name...",
+        "desc":"Class description...",
+        "wpns":"Weapons...",
+        "armor":"Armor...",
+        "suit":"Suited for...",
+        "alignments":"Alignments..."
+    },
+    {
         "name":"Barbarian",
         "desc":"Big scary guy",
         "wpns":"Big ass axe",

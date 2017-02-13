@@ -74,6 +74,10 @@ td.name-cell, td.score-cell {
   text-align: justify;
 }
 
+input[type=checkbox] {
+  margin-right: 8px;
+}
+
 input[name=class] {
   float: left;
 }

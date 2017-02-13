@@ -1,5 +1,18 @@
 var races = [
     {
+        "name":"Race name...",
+        "height_ft": 5,
+        "height_in": 10,
+        "weight": 170,
+        "mods": "Race modifiers...",
+        "spd": 30,
+        "size": "Medium",
+        "desc": "Race description...",
+        "traits": "Race traits...",
+        "lang": "Common",
+        "link": "#"
+    },
+    {
         "name":"Human",
         "height_ft": 5,
         "height_in": 10,

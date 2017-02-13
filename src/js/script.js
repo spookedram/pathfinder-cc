@@ -39,17 +39,31 @@ function setRace(idx) {
   $("#raceLangs").text(race.lang);
   $("#raceLink").text(race.name);
   $("#raceLink").attr("href", race.link);
-
-
   $("input[name=height_feet]").val(race.height_ft);
   $("input[name=height_inches]").val(race.height_in);
   $("input[name=weight]").val(race.weight);
 }
 
-setRace(0); //Initialize race info to human
+var customRace = false;
+
+$("#customRace").on("click", function() {
+  if(!customRace) {
+    customRace = true;
+    $(".raceText").attr("contentEditable", true);
+    $(this).css("background-color", "lightgray");
+    setRace(0);
+  } else {
+    customRace = false;
+    $(".raceText").attr("contentEditable", false);
+    $(this).css("background-color", "white");
+    setRace(1);
+  }
+});
+
+setRace(1); //Initialize race info to human
 
 $("#selectRace").on("input", function() {
- setRace($(this).val());
+ setRace($(this).val() + 1);
 });
 
 //======================================================
@@ -65,14 +79,26 @@ function setJob(idx) {
   $("#prefAlign").text(job.alignments);
 }
 
-setJob(0); //Initialize class info to barbarian
+var customJob = false;
 
-$("#basicJobs").on("input", function() {
-  setJob($(this).val());
+$("#customJob").on("click", function() {
+  if(!customJob) {
+    customJob = true;
+    $(".jobText").attr("contentEditable", true);
+    $(this).css("background-color", "lightgray");
+    setJob(0);
+  } else {
+    customJob = false;
+    $(".jobText").attr("contentEditable", false);
+    $(this).css("background-color", "white");
+    setJob(1);
+  }
 });
 
-$("#presJobs").on("input", function() {
-  setJob($(this).val());
+setJob(1); //Initialize class info to barbarian
+
+$("#basicJobs").on("input", function() {
+  setJob($(this).val() + 1);
 });
 
 //======================================================
