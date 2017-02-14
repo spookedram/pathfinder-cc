@@ -49,11 +49,13 @@ var customRace = false;
 $("#customRace").on("click", function() {
   if(!customRace) {
     customRace = true;
+    $("#selectRace").attr("disabled", true);
     $(".raceText").attr("contentEditable", true);
     $(this).css("background-color", "lightgray");
     setRace(0);
   } else {
     customRace = false;
+    $("#selectRace").attr("disabled", false);
     $(".raceText").attr("contentEditable", false);
     $(this).css("background-color", "white");
     setRace(1);
@@ -63,7 +65,7 @@ $("#customRace").on("click", function() {
 setRace(1); //Initialize race info to human
 
 $("#selectRace").on("input", function() {
- setRace($(this).val() + 1);
+ setRace($(this).val());
 });
 
 //======================================================
@@ -84,11 +86,13 @@ var customJob = false;
 $("#customJob").on("click", function() {
   if(!customJob) {
     customJob = true;
+    $("#basicJobs").attr("disabled", true);
     $(".jobText").attr("contentEditable", true);
     $(this).css("background-color", "lightgray");
     setJob(0);
   } else {
     customJob = false;
+    $("#basicJobs").attr("disabled", false);
     $(".jobText").attr("contentEditable", false);
     $(this).css("background-color", "white");
     setJob(1);
@@ -98,7 +102,7 @@ $("#customJob").on("click", function() {
 setJob(1); //Initialize class info to barbarian
 
 $("#basicJobs").on("input", function() {
-  setJob($(this).val() + 1);
+  setJob($(this).val());
 });
 
 //======================================================
